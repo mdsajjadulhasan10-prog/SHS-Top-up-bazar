@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHS Top-up Bazar</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+    }
+
+    .header {
+      text-align: center;
+      padding: 25px 15px;
+      background: #111827;
+    }
+
+    .header h1 {
+      color: #38bdf8;
+      font-size: 30px;
+    }
+
+    .header p {
+      margin-top: 8px;
+      color: #cbd5e1;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 25px auto;
+      padding: 15px;
+    }
+
+    .box {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+
+    .box h2 {
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .packages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .package {
+      background: #334155;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .package:hover {
+      border-color: #38bdf8;
+    }
+
+    .package h3 {
+      color: #60a5fa;
+      margin-bottom: 5px;
+    }
+
+    .package p {
+      color: #facc15;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #22c55e;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+
+    .notice {
+      text-align: center;
+      color: #fbbf24;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>💎 SHS TOP-UP BAZAR</h1>
+    <p>Free Fire Diamond Top-Up Demo</p>
+  </div>
+
+  <div class="container">
+
+    <div class="box">
+      <h2>🆔 Player Information</h2>
+
+      <input
+        type="text"
+        id="uid"
+        placeholder="আপনার Free Fire UID লিখুন"
+      >
+
+      <input
+        type="text"
+        id="name"
+        placeholder="Player Name লিখুন"
+      >
+    </div>
+
+    <div class="box">
+      <h2>💎 Diamond Package</h2>
+
+      <div class="packages">
+
+        <div class="package" onclick="selectPackage('100 Diamonds')">
+          <h3>💎 100</h3>
+          <p>৳ Demo</p>
+        </div>
+
+        <div class="package" onclick="selectPackage('310 Diamonds')">
+          <h3>💎 310</h3>
+          <p>৳ Demo</p>
+        </div>
+
+        <div class="package" onclick="selectPackage('520 Diamonds')">
+          <h3>💎 520</h3>
+          <p>৳ Demo</p>
+        </div>
+
+        <div class="package" onclick="selectPackage('1060 Diamonds')">
+          <h3>💎 1060</h3>
+          <p>৳ Demo</p>
+        </div>
+
+      </div>
+
+      <button onclick="orderNow()">Order Now</button>
+
+      <div class="notice">
+        ⚠️ এটি শুধুমাত্র Demo website। কোনো আসল payment নেওয়া হচ্ছে না।
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 SHS Top-up Bazar
+  </footer>
+
+  <script>
+    let selectedPackage = "";
+
+    function selectPackage(packageName) {
+      selectedPackage = packageName;
+      alert("Selected: " + packageName);
+    }
+
+    function orderNow() {
+      const uid = document.getElementById("uid").value;
+      const name = document.getElementById("name").value;
+
+      if (uid === "" || name === "") {
+        alert("দয়া করে UID এবং Player Name দিন।");
+        return;
+      }
+
+      if (selectedPackage === "") {
+        alert("দয়া করে একটি Diamond Package নির্বাচন করুন।");
+        return;
+      }
+
+      alert(
+        "Demo Order তৈরি হয়েছে!\\n\\n" +
+        "UID: " + uid + "\\n" +
+        "Name: " + name + "\\n" +
+        "Package: " + selectedPackage
+      );
+    }
+  </script>
+
+</body>
+  </html>
