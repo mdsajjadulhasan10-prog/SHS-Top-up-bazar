@@ -396,3 +396,79 @@ Diamond top up
 
 </body>
 </html>
+<div 
+      <div class="package"
+           onclick="selectPackage(this, '5060 Diamonds', 3100)">
+        <div class="diamond">💎</div>
+        <h3>5060 Diamonds</h3>
+        <div class="price">৳3100</div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- PASS -->
+
+  <div class="box">
+
+    <h2>🎫 Special Pass</h2>
+
+    <div class="packages">
+
+      <div class="package"
+           onclick="selectPackage(this, 'Weekly Pass', 145)">
+        <div class="diamond">🎫</div>
+        <h3>Weekly Pass</h3>
+        <div class="price">৳145</div>
+      </div>
+
+
+      <div class="package"
+           onclick="selectPackage(this, 'Monthly Pass', 750)">
+        <div class="diamond">🎫</div>
+        <h3>Monthly Pass</h3>
+        <div class="price">৳750</div>
+      </div>
+
+
+      <div class="package"
+           onclick="selectPackage(this, 'Level Up Pass', 300)">
+        <div class="diamond">🚀</div>
+        <h3>Level Up Pass</h3>
+        <div class="price">৳300</div>
+      </div>
+
+    </div>
+
+
+    <div class="selected-info" id="selectedInfo">
+      কোনো package নির্বাচন করা হয়নি
+    </div>
+
+
+    <button onclick="orderNow()">
+      🛒 Order Now
+    </button>
+
+
+    <div class="notice">
+      ⚠️ এটি Demo website। বর্তমানে কোনো আসল payment নেওয়া হচ্ছে না।
+    </div>
+
+  </div>
+
+</div>
+
+
+<footer>
+  © 2026 SHS TOP-UP BAZAR
+</footer>
+
+
+<script>
+
+  let selectedPackage = "";
+  let selectedPrice = 0;
+
